@@ -1,0 +1,41 @@
+.dashboard-container {
+    padding: 24px;
+    background-color: #f5f5f5;
+    min-height: 100vh; // Sayfanın tamamını kaplaması için
+  
+    h2 {
+      color: #1890ff;
+      text-align: center;
+    }
+  
+    p {
+      font-size: 16px;
+      text-align: center;
+    }
+  
+    // Responsive Tasarım
+    @media (max-width: 768px) {
+      padding: 16px;
+  
+      h2 {
+        font-size: 20px;
+      }
+  
+      p {
+        font-size: 14px;
+      }
+    }
+  
+    @media (max-width: 480px) {
+      padding: 12px;
+  
+      h2 {
+        font-size: 18px;
+      }
+  
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+  

@@ -1,0 +1,92 @@
+/* products.scss */
+
+/* Genel stil ayarları */
+.ant-table-thead > tr > th {
+    background-color: #f0f2f5;
+  }
+  
+  .ant-table {
+    background: #fff;
+  }
+  
+  .ant-table-tbody > tr > td {
+    padding: 12px;
+  }
+  
+  .ant-btn-primary {
+    background-color: #1890ff;
+    border-color: #1890ff;
+  }
+  
+  .ant-btn-primary:hover {
+    background-color: #40a9ff;
+    border-color: #40a9ff;
+  }
+  
+  /* Responsive Design için medyaya özgü stil eklemeler */
+  
+  @media (max-width: 768px) {
+    /* Mobil ekranlar için düzenlemeler */
+    .ant-row {
+      display: block;
+    }
+  
+    .ant-col {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    .ant-btn-primary {
+      width: 100%;
+      text-align: center;
+    }
+  
+    /* Arama ve filtreleme alanı küçük ekranlarda alt alta gelecek şekilde düzenleniyor */
+    .ant-input, .ant-select {
+      width: 100%;
+    }
+  
+    .ant-select {
+      margin-top: 10px;
+    }
+  
+    /* Tabloyu daha dar yapabilmek için yazı boyutları */
+    .ant-table-thead > tr > th, 
+    .ant-table-tbody > tr > td {
+      font-size: 12px;
+      padding: 8px;
+    }
+  
+    /* Fotoğraf boyutunu küçük ekranlarda daha uygun yapalım */
+    .ant-table-column-image img {
+      width: 40px;
+      height: 40px;
+    }
+  
+    /* "Yeni Ürün Ekle" butonunun hizalaması */
+    .ant-col.ant-col-12 {
+      text-align: left;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    /* Çok küçük ekranlar için daha fazla düzenleme */
+    .ant-table-tbody > tr > td {
+      font-size: 10px;
+      padding: 6px;
+    }
+  
+    .ant-btn-primary {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    .ant-table-thead > tr > th {
+      font-size: 14px;
+    }
+  
+    .ant-table .ant-table-tbody {
+      overflow-x: auto;
+    }
+  }
+  
