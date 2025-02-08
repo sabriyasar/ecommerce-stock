@@ -20,7 +20,7 @@ const Login = () => {
   // Giriş formunu gönderme işlemi
   const onFinish = async (values) => {
     setLoading(true);
-    const { username, password } = values;
+    const { username, password, remember } = values;
 
     // JSON dosyasını public klasöründen alalım
     try {
@@ -34,6 +34,12 @@ const Login = () => {
 
       if (user) {
         message.success("Giriş başarılı!");
+
+        // Eğer "Beni hatırla" seçeneği seçildiyse, kullanıcı bilgilerini localStorage'a kaydediyoruz
+        if (remember) {
+          localStorage.setItem("username", username);
+        }
+
         navigate("/dashboard"); // Başarılı giriş sonrası dashboard sayfasına yönlendir
       } else {
         message.error("Geçersiz kullanıcı adı veya şifre!");
