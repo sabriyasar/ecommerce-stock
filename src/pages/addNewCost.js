@@ -73,8 +73,17 @@ const AddNewCost = () => {
           name="productName"
           rules={[{ required: true, message: "Lütfen ürün adını girin!" }]}
         >
-          <Input placeholder="Örn: 3D Model XYZ" />
+          <Input
+            placeholder="Örn: Model 3"
+            onKeyPress={(e) => {
+              const char = String.fromCharCode(e.which);
+              if (!/[a-zA-Z0-9çÇğĞıİöÖşŞüÜ :/-]/.test(char)) {
+                e.preventDefault();
+              }
+            }}
+          />
         </Form.Item>
+
         <Form.Item
           label="Filament Markası"
           name="filamentBrand"
