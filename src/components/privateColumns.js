@@ -192,11 +192,11 @@ const getPrivateColumns = (navigate, handleDelete) => [
     key: "action",
     render: (_, record) => (
       <Space>
-        <Button onClick={() => navigate(`/editproduct/${record.key}`)}>Güncelle</Button>
-        <Button danger onClick={() => handleDelete(record.key)}>Sil</Button>
+        <Button onClick={() => navigate(`/editproduct/${record._id}`)}>Güncelle</Button>
+        <Button danger onClick={() => handleDelete(record._id)}>Sil</Button>
       </Space>
     ),
-  },
+  }  
 ];
 
 export default getPrivateColumns;

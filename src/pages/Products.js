@@ -59,7 +59,15 @@ const Products = () => {
   };
 
   const allColumns = [
-    ...getPrivateColumns(navigate, handleDelete),
+    ...getPrivateColumns(navigate, handleDelete).map(col => {
+      if (col.key === "description") {
+        return {
+          ...col,
+          render: (text) => text.length > 20 ? text.slice(0, 20) + "…" : text
+        };
+      }
+      return col;
+    }),
     {
       title: "Excel",
       key: "exportExcel",
@@ -75,7 +83,7 @@ const Products = () => {
         </Tooltip>
       ),
     },
-  ];
+  ];  
 
   const displayedColumns = allColumns.filter((col) => {
     if (mandatoryKeys.includes(col.key)) return true;
