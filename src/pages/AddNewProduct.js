@@ -17,9 +17,11 @@ import {
   CameraOutlined,
   ExclamationCircleOutlined,
 } from "@ant-design/icons";
+import "../assets/scss/addNewProduct.scss"; // <-- SCSS importu
 import { useNavigate } from "react-router-dom";
 import Quagga from "quagga";
-import "../assets/scss/addNewProduct.scss"; // <-- SCSS importu
+import axios from "axios"; // <-- Bu satırı ekle
+import { addProduct } from "../services/productService";
 
 const { Title } = Typography;
 const { Option } = Select;
@@ -128,61 +130,46 @@ const AddNewProduct = () => {
   }; */
 
   const handleBarcodeInput = (e) => {
-    const value = e.target.value.toUpperCase(); // Büyük harfe çevir
+    let value = e.target.value.toUpperCase(); // Büyük harfe çevir
+  
     // Sadece İngilizce harf ve rakam izin ver, Türkçe karakter engelle
-    if (/^[A-Z0-9]*$/.test(value)) setBarcode(value);
+    value = value.replace(/[^A-Z0-9]/g, "");
+  
+    setBarcode(value);
   };
+  
 
-  // 💾 Form Kaydetme
-  const handleFinish = (values) => {
-    const existingProducts = JSON.parse(localStorage.getItem("products")) || [];
-
+  // 💾 Form Kaydetme -> MongoDB
+  const handleFinish = async (values) => {
     const newProduct = {
-      key: Date.now(),
-      barcode: barcode,
+      barcode,
       modelCode: values.modelCode,
       brand: values.brand,
       category: values.category,
       currency: "TRY",
       name: values.name,
       description: values.description,
-      marketPrice: values.marketPrice,
-      trendyolPrice: trendyolPrice,
-      stock: stock,
-      stockCode: values.stockCode,
-      vatRate: vatRate,
-      desi: values.desi,
-      shippingTime: values.shippingTime,
-      shippingType: values.shippingType,
-      batteryRequired: batteryRequired,
-      packageContent: values.packageContent,
-      color: values.color,
-      ceCertificate: values.ceCertificate,
-      manufacturer: values.manufacturer,
-      feature: values.feature,
-      age: age,
-      packageImageFront: previewImages.front,
-      batteryIncluded: batteryIncluded,
-      importer: values.importer,
-      instructions: values.instructions,
-      batterySize: values.batterySize,
-      otherFeatures: values.otherFeatures,
-      ageGroup: values.ageGroup,
-      warnings: values.warnings,
-      origin: origin,
-      packageImageBack: previewImages.back,
-      batteryType: values.batteryType,
+      marketPrice: parseFloat(marketPrice.replace(".", "").replace(",", ".")), // 54,90 -> 54.90
+      trendyolPrice: parseFloat(trendyolPrice.replace(".", "").replace(",", ".")),
+      stock: parseInt(stock, 10),
+      vatRate: parseInt(vatRate, 10),
+      batteryRequired,
+      age,
+      batteryIncluded,
+      origin,
       images: Object.values(previewImages),
-      platform: platform,
-      cost: cost,
-    };
+      platform,
+      cost: parseFloat(cost) || 0,
+    };    
 
-    localStorage.setItem(
-      "products",
-      JSON.stringify([...existingProducts, newProduct])
-    );
-    message.success("Ürün başarıyla eklendi!");
-    navigate("/products");
+    try {
+      await addProduct(newProduct);
+      message.success("Ürün MongoDB’ye başarıyla kaydedildi!");
+      navigate("/products");
+    } catch (error) {
+      console.error(error);
+      message.error("Ürün kaydedilirken hata oluştu!");
+    }
   };
 
   return (

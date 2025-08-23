@@ -7,7 +7,7 @@ const { Title } = Typography;
 const Dashboard = () => {
   return (
     <div>
-      <Title level={2}>Merhaba Sabri, Hoş Geldin</Title>
+      <Title level={2}>Merhaba, Hoş Geldin</Title>
       <p>Hemen ürünlerini kontrol et.</p>
     </div>
   );
