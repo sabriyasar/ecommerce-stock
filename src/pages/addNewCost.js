@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Form, Input, Button, Select, message, Typography } from "antd";
 import { useNavigate } from "react-router-dom";
 import { addCost } from "../services/costServices";
+import "../assets/scss/addNewCost.scss";
 
 const { Title } = Typography;
 const { Option } = Select;
@@ -64,7 +65,7 @@ const AddNewCost = () => {
   };
 
   return (
-    <div style={{ padding: 24 }}>
+    <div className="add-new-cost-page">
       <Title level={2}>Yeni Maliyet Ekle</Title>
       <Form layout="vertical" form={form} onFinish={handleFinish}>
         <Form.Item

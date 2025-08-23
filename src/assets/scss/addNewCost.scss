@@ -1,0 +1,36 @@
+/* src/assets/scss/addNewCost.scss */
+
+.add-new-cost-page {
+    padding: 24px;
+  
+    .ant-typography {
+      margin-bottom: 24px;
+    }
+  
+    .ant-form-item {
+      margin-bottom: 16px;
+    }
+  
+    .ant-btn {
+      min-width: 120px;
+    }
+  
+    /* Responsive ayarlar */
+    @media (max-width: 768px) {
+      padding: 16px;
+  
+      .ant-typography {
+        font-size: 20px;
+        margin-bottom: 16px;
+      }
+  
+      .ant-form-item {
+        margin-bottom: 12px;
+      }
+  
+      .ant-btn {
+        width: 100%;
+      }
+    }
+  }
+  
