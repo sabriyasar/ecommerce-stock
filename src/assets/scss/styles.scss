@@ -1,0 +1,63 @@
+/* styles.scss */
+
+.site-layout-background {
+    background: #fff;
+  }
+  
+  .site-layout {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+  }
+  
+  .site-layout .ant-layout-sider {
+    background: #001529;
+  }
+  
+  .site-layout .ant-layout-sider .ant-menu-item {
+    color: #fff;
+  }
+  
+  .site-layout .ant-layout-sider .ant-menu-item:hover {
+    background-color: #1890ff;
+  }
+  
+  .site-layout .ant-layout-sider .ant-menu-item-selected {
+    background-color: #1890ff !important;
+  }
+  
+  /* Responsive Design for Mobile */
+  @media (max-width: 768px) {
+    .site-layout .ant-layout-sider {
+      position: absolute;
+      left: -200px;
+      transition: all 0.3s;
+    }
+  
+    .site-layout .ant-layout-sider.collapsed {
+      left: 0;
+    }
+  
+    .site-layout .ant-layout .ant-menu {
+      width: 100%;
+    }
+  
+    .site-layout .ant-layout-sider .ant-menu-item {
+      text-align: center;
+    }
+  
+    .site-layout .ant-layout .ant-menu-item-selected {
+      background-color: #001529;
+    }
+  
+    .site-layout .ant-layout-content {
+      padding: 10px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .site-layout .ant-layout-sider {
+      left: -100%;
+    }
+  }
+  

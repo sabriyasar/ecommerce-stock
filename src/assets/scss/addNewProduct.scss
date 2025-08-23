@@ -1,0 +1,88 @@
+.add-product-container {
+  padding: 24px;
+  max-width: 900px;
+  margin: auto;
+
+  .ant-upload-drag {
+    text-align: center;
+    padding: 20px;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+  }
+
+  .ant-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -8px; // kolonlar arası boşluk
+  }
+
+  .ant-col {
+    flex: 1 1 calc(50% - 16px); // iki kolon yan yana
+    min-width: 280px;
+    padding: 8px;
+  }
+
+  .ant-form-item {
+    margin-bottom: 16px;
+  }
+
+  .barcode-input {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    .ant-input {
+      flex: 1;
+    }
+
+    .ant-btn {
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+
+      .ant-input,
+      .ant-btn {
+        width: 100%;
+      }
+    }
+  }
+
+  .video-container {
+    width: 100%;
+    height: 200px;
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  .images-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+
+    .ant-col {
+      flex: 1 1 calc(25% - 12px); // 4 görsel yan yana
+      min-width: 120px;
+
+      @media (max-width: 768px) {
+        flex: 1 1 100%; // mobilde tek sütun
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .ant-col {
+      flex: 1 1 100%;
+      padding: 8px 0;
+    }
+  }
+}

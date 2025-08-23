@@ -1,0 +1,45 @@
+.header-menu {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 0 20px;
+    height: 60px;
+    box-shadow: 0 2px 8px #f0f1f2;
+    position: relative;
+  
+    .logo {
+      font-weight: bold;
+      font-size: 20px;
+      cursor: pointer;
+      margin-left: 16px;
+    }
+  
+    .mobile-toggle {
+      margin-left: 0;
+    }
+  
+    .desktop-logout {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+  
+      .ant-btn {
+        background-color: #ff4d4f;
+        color: #fff;
+        border: none;
+  
+        &:hover {
+          background-color: #ff7875;
+          color: #fff;
+        }
+      }
+    }
+  
+    @media screen and (max-width: 768px) {
+      .desktop-logout {
+        display: none; // mobilde gizle
+      }
+    }
+  }
+  
