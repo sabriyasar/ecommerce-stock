@@ -22,6 +22,7 @@ const Layout = () => {
   const menuItems = [
     { key: "/dashboard", label: "Dashboard" },
     { key: "/products", label: "Ürünler" },
+    { key: "/costs", label: "Maliyetler" },
   ];
 
   return (

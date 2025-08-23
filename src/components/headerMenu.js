@@ -14,6 +14,7 @@ const HeaderMenu = () => {
     { key: "/dashboard", label: "Dashboard" },
     { key: "/products", label: "Ürünler" },
     { key: "/addnewproducts", label: "Yeni Ürün Ekle" },
+    { key: "/costs", label: "Maliyetler" },
   ];
 
   const handleResize = () => setIsMobile(window.innerWidth <= 768);

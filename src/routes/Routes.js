@@ -7,6 +7,8 @@ import Products from "../pages/Products";
 import AddNewProduct from "../pages/AddNewProduct";
 import EditProduct from "../pages/EditProduct";
 import Layout from "../components/Layout";
+import Costs from "../pages/Costs";
+import AddNewCost from "../pages/addNewCost";
 
 const Routing = () => {
   return (
@@ -21,6 +23,8 @@ const Routing = () => {
           <Route path="/products" element={<Products />} />
           <Route path="/addnewproducts" element={<AddNewProduct />} />
           <Route path="/editproduct/:id" element={<EditProduct />} />
+          <Route path="/costs" element={<Costs />} />
+          <Route path="/addnewcost" element={<AddNewCost />} />
         </Route>
       </Routes>
     </Router>
