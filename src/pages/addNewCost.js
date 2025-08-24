@@ -83,7 +83,28 @@ const AddNewCost = () => {
             }}
           />
         </Form.Item>
-
+        <Form.Item
+          label="Ürün Barkodu"
+          name="productBarcode"
+          rules={[
+            { required: true, message: "Lütfen ürün barkodunu girin!" },
+            {
+              pattern: /^[A-Za-zÇĞİÖŞÜçğıöşü0-9]+$/,
+              message: "Sadece harf ve pozitif sayılardan oluşabilir",
+            },
+          ]}
+        >
+          <Input
+            placeholder="Örn: ABC12345"
+            onKeyPress={(e) => {
+              const char = e.key;
+              // Harf veya rakam dışında bir şey girilmesin
+              if (!/[a-zA-Z0-9çÇğĞıİöÖşŞüÜ]/.test(char)) {
+                e.preventDefault();
+              }
+            }}
+          />
+        </Form.Item>
         <Form.Item
           label="Filament Markası"
           name="filamentBrand"
@@ -95,7 +116,6 @@ const AddNewCost = () => {
             <Option value="Valment">Valment</Option>
           </Select>
         </Form.Item>
-
         <Form.Item
           label="Filament Rengi"
           name="filamentColor"
@@ -111,7 +131,6 @@ const AddNewCost = () => {
             }}
           />
         </Form.Item>
-
         <Form.Item
           label="Filament Ücreti"
           name="filamentCost"
@@ -119,7 +138,6 @@ const AddNewCost = () => {
         >
           <Input placeholder="Örn: 50" maxLength={4} />
         </Form.Item>
-
         <Form.Item
           label="Ürünün Birim Fiyatı"
           name="unitPrice"
@@ -127,7 +145,6 @@ const AddNewCost = () => {
         >
           <Input placeholder="Örn: 120.50" maxLength={6} />
         </Form.Item>
-
         <Form.Item
           label="Çoklu Baskı Adedi"
           name="multiplePrintQty"
@@ -135,7 +152,6 @@ const AddNewCost = () => {
         >
           <Input placeholder="Örn: 5" maxLength={3} />
         </Form.Item>
-
         <Form.Item
           label="Çoklu Baskı Birim Fiyatı"
           name="multiplePrintUnitPrice"
@@ -143,16 +159,20 @@ const AddNewCost = () => {
         >
           <Input placeholder="Örn: 110.25" maxLength={6} />
         </Form.Item>
-
         <Form.Item>
-          <Button
-            type="primary"
-            htmlType="submit"
-            loading={loading}
-            disabled={isButtonDisabled()}
-          >
-            Kaydet
-          </Button>
+          <div style={{ display: "flex", gap: "10px" }}>
+            <Button
+              type="primary"
+              htmlType="submit"
+              loading={loading}
+              disabled={isButtonDisabled()}
+            >
+              Kaydet
+            </Button>
+            <Button danger type="primary" onClick={() => navigate("/costs")}>
+              Geri
+            </Button>
+          </div>
         </Form.Item>
       </Form>
     </div>
