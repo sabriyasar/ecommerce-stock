@@ -205,7 +205,6 @@ const Costs = () => {
       <Table
         dataSource={filteredData}
         columns={filteredColumns}
-        scroll={{ y: 600 }} // tabloya maksimum 600px yükseklik ver, başlık satırla birlikte kayar
         pagination={{ pageSize: 15 }} // her sayfada 15 veri göster
       />
     </div>
