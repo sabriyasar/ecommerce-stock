@@ -141,9 +141,46 @@ const AddNewCost = () => {
         <Form.Item
           label="Ürünün Birim Fiyatı"
           name="unitPrice"
-          rules={getDecimalNumberRules(3, 2)}
+          rules={[
+            { required: true, message: "Lütfen fiyat girin!" },
+            {
+              pattern: /^\d{1,3}(,\d{0,2})?$/,
+              message:
+                "Geçersiz format! Maks 3 basamak tam sayı ve 2 basamak ondalık, virgül kullanabilirsiniz.",
+            },
+          ]}
         >
-          <Input placeholder="Örn: 120.50" maxLength={6} />
+          <Input
+            placeholder="Örn: 144,25"
+            onKeyPress={(e) => {
+              const char = e.key;
+              const currentValue = e.currentTarget.value;
+
+              // sadece rakam ve virgül
+              if (!/[0-9,]/.test(char)) {
+                e.preventDefault();
+              }
+
+              // sadece bir virgül olabilir
+              if (char === "," && currentValue.includes(",")) {
+                e.preventDefault();
+              }
+
+              const parts = currentValue.split(",");
+              // tam sayı kısmı 3 basamak sınırı
+              if (
+                parts[0].length >= 3 &&
+                char !== "," &&
+                !currentValue.includes(",")
+              ) {
+                e.preventDefault();
+              }
+              // virgülden sonra maksimum 2 basamak
+              if (parts[1] && parts[1].length >= 2 && char !== ",") {
+                e.preventDefault();
+              }
+            }}
+          />
         </Form.Item>
         <Form.Item
           label="Çoklu Baskı Adedi"
@@ -155,9 +192,38 @@ const AddNewCost = () => {
         <Form.Item
           label="Çoklu Baskı Birim Fiyatı"
           name="multiplePrintUnitPrice"
-          rules={getDecimalNumberRules(3, 2)}
+          rules={[
+            { required: true, message: "Lütfen fiyat girin!" },
+            {
+              pattern: /^\d{1,3}(,\d{0,2})?$/,
+              message:
+                "Geçersiz format! Maks 3 basamak tam sayı ve 2 basamak ondalık, virgül kullanabilirsiniz.",
+            },
+          ]}
         >
-          <Input placeholder="Örn: 110.25" maxLength={6} />
+          <Input
+            placeholder="Örn: 110,25"
+            onKeyPress={(e) => {
+              const char = e.key;
+              const currentValue = e.currentTarget.value;
+
+              if (!/[0-9,]/.test(char)) e.preventDefault();
+              if (char === "," && currentValue.includes(","))
+                e.preventDefault();
+
+              const parts = currentValue.split(",");
+              if (
+                parts[0].length >= 3 &&
+                char !== "," &&
+                !currentValue.includes(",")
+              ) {
+                e.preventDefault();
+              }
+              if (parts[1] && parts[1].length >= 2 && char !== ",") {
+                e.preventDefault();
+              }
+            }}
+          />
         </Form.Item>
         <Form.Item>
           <div style={{ display: "flex", gap: "10px" }}>

@@ -43,10 +43,11 @@ const Costs = () => {
     const fetchCosts = async () => {
       try {
         const res = await getCosts();
-        const costsWithKey = res.data.map((item) => ({
-          ...item,
-          key: item._id,
-        }));
+        const costsWithKey = res.data
+          .map((item) => ({ ...item, key: item._id }))
+          // Tarihe göre azalan sırada (yeni eklenen en üstte)
+          .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+  
         setData(costsWithKey);
         setFilteredData(costsWithKey);
       } catch (error) {
@@ -54,9 +55,9 @@ const Costs = () => {
         message.error("Maliyetler yüklenirken hata oluştu!");
       }
     };
-
+  
     fetchCosts();
-  }, []);
+  }, []);  
 
   // 🔎 Sadece ürün adı ve barkod üzerinde arama
   const handleSearch = (value) => {
