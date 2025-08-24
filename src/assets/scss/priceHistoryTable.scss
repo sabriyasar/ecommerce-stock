@@ -1,0 +1,49 @@
+.price-history-table-wrapper {
+    width: 100%;
+    overflow-x: auto; /* yatay kaydırma wrapper üzerinden */
+  }
+  
+  .price-history-table {
+    display: inline-block; /* min-width etkili olsun */
+    min-width: 1000px; /* ihtiyaç halinde arttır */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  
+    .ant-table-container {
+      overflow-x: auto; /* başlık ve gövde kaydırılabilir */
+    }
+  
+    .ant-table {
+      width: max-content; /* kolonlar sığmazsa genişler */
+      
+      th {
+        background-color: #f5f5f5;
+        font-weight: 600;
+        white-space: nowrap;
+      }
+  
+      td {
+        font-size: 14px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  
+    @media (max-width: 768px) {
+      .ant-table {
+        font-size: 12px;
+  
+        th,
+        td {
+          padding: 8px;
+        }
+      }
+  
+      .ant-tooltip-inner {
+        font-size: 12px;
+      }
+    }
+  }
+  

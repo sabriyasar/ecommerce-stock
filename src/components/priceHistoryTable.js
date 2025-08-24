@@ -1,6 +1,7 @@
 // src/components/PriceHistoryTable.js
 import React from "react";
 import { Table, Typography, Tooltip } from "antd";
+import "../assets/scss/priceHistoryTable.scss";
 
 const { Title } = Typography;
 
@@ -73,16 +74,19 @@ const PriceHistoryTable = ({ data }) => {
   ];
 
   return (
-    <div style={{ marginTop: 20 }}>
+    <div className="price-history-table-wrapper" style={{ marginTop: 20 }}>
       <Title level={4}>Ürün Fiyat Geçmişi</Title>
-      <Table
-        dataSource={data}
-        columns={columns}
-        rowKey={(record, index) => index}
-        pagination={{ pageSize: 5 }}
-      />
+      <div className="price-history-table">
+        <Table
+          dataSource={data}
+          columns={columns}
+          rowKey={(record, index) => index}
+          pagination={{ pageSize: 5 }}
+        />
+      </div>
     </div>
   );
+  
 };
 
 export default PriceHistoryTable;
