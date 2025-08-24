@@ -10,6 +10,7 @@ import Layout from "../components/Layout";
 import Costs from "../pages/Costs";
 import AddNewCost from "../pages/addNewCost";
 import EditCost from "../pages/EditCost";
+import CostCalculation from "../pages/CostCalculation";
 
 const Routing = () => {
   return (
@@ -27,6 +28,7 @@ const Routing = () => {
           <Route path="/costs" element={<Costs />} />
           <Route path="/addnewcost" element={<AddNewCost />} />
           <Route path="/editcost/:id" element={<EditCost />} />
+          <Route path="/costcalculation" element={<CostCalculation />} />
         </Route>
       </Routes>
     </Router>

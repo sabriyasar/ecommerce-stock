@@ -23,6 +23,7 @@ const Layout = () => {
     { key: "/dashboard", label: "Dashboard" },
     { key: "/products", label: "Ürünler" },
     { key: "/costs", label: "Maliyetler" },
+    { key: "/costcalculation", label: "Maliyet Hesaplama" }, // yeni link
   ];
 
   return (

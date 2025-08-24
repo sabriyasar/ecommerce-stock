@@ -1,0 +1,67 @@
+/* src/assets/scss/costCalculation.scss */
+
+.cost-calculation-page {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  
+    h2 {
+      margin-bottom: 24px;
+      text-align: center;
+    }
+  
+    .ant-form-item {
+      margin-bottom: 16px;
+  
+      label {
+        font-weight: 500;
+      }
+    }
+  
+    .ant-select,
+    .ant-input,
+    .ant-input-number {
+      width: 100%;
+    }
+  
+    .ant-input-number {
+      text-align: right;
+    }
+  
+    .calc-buttons {
+      display: flex;
+      gap: 12px;
+      margin-top: 24px;
+      justify-content: flex-end;
+    }
+  
+    .result-section {
+      margin-top: 32px;
+      padding: 16px;
+      background-color: #fafafa;
+      border-radius: 6px;
+      border: 1px solid #f0f0f0;
+  
+      h3 {
+        margin-bottom: 16px;
+      }
+  
+      .result-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 6px 0;
+  
+        .label {
+          font-weight: 500;
+        }
+  
+        .value {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+  

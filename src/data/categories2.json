@@ -1,0 +1,723 @@
+[
+  {
+    "Id": 368,
+    "Name": "Aksesuar",
+    "subCategories": [
+      {
+        "Id": 387,
+        "Name": "Saat",
+        "Commission": 21.5
+      },
+      {
+        "Id": 394,
+        "Name": "Şapka",
+        "Commission": 22.5
+      },
+      {
+        "Id": 396,
+        "Name": "Takı & Mücevher",
+        "Commission": 30
+      },
+      {
+        "Id": 435,
+        "Name": "Çanta",
+        "Commission": 25
+      },
+      {
+        "Id": 1162,
+        "Name": "Atkı & Bere & Eldiven",
+        "Commission": 30
+      },
+      {
+        "Id": 1165,
+        "Name": "Kemer & Pantolon Askısı",
+        "Commission": 30
+      },
+      {
+        "Id": 1166,
+        "Name": "Kravat & Kol Düğmesi",
+        "Commission": 30
+      },
+      {
+        "Id": 1228,
+        "Name": "Altın",
+        "Commission": 5
+      },
+      {
+        "Id": 2872,
+        "Name": "Diğer Aksesuar",
+        "Commission": 30
+      },
+      {
+        "Id": 2875,
+        "Name": "Şal & Fular",
+        "Commission": 30
+      },
+      {
+        "Id": 2876,
+        "Name": "Gözlük",
+        "Commission": 25
+      },
+      {
+        "Id": 2878,
+        "Name": "Saç Aksesuarı",
+        "Commission": 30
+      },
+      {
+        "Id": 3074,
+        "Name": "Aksesuar Set",
+        "Commission": 22.5
+      },
+      {
+        "Id": 3243,
+        "Name": "Saat Seti",
+        "Commission": 21.5
+      },
+      {
+        "Id": 4527,
+        "Name": "Gavroş",
+        "Commission": 22.5
+      }
+    ]
+  },
+  {
+    "Id": 2862,
+    "Name": "Anne & Bebek & Çocuk",
+    "subCategories": [
+      {
+        "Id": 674,
+        "Name": "Çocuk Gereçleri",
+        "Commission": 18
+      },
+      {
+        "Id": 1010,
+        "Name": "Oyuncak",
+        "Commission": 18
+      },
+      {
+        "Id": 2164,
+        "Name": "Bebek Hediyelik",
+        "Commission": 18
+      },
+      {
+        "Id": 5216,
+        "Name": "Anne Bebek Ürünleri",
+        "Commission": 18
+      }
+    ]
+  },
+  {
+    "Id": 403,
+    "Name": "Ayakkabı",
+    "subCategories": [
+      {
+        "Id": 406,
+        "Name": "Bot & Çizme",
+        "Commission": 25
+      },
+      {
+        "Id": 417,
+        "Name": "Sandalet ve Terlik",
+        "Commission": 25
+      },
+      {
+        "Id": 420,
+        "Name": "Spor Ayakkabı",
+        "Commission": 25
+      },
+      {
+        "Id": 430,
+        "Name": "Topuklu Ayakkabı",
+        "Commission": 25
+      },
+      {
+        "Id": 1170,
+        "Name": "Ev Terliği & Botu",
+        "Commission": 25
+      },
+      {
+        "Id": 1171,
+        "Name": "Günlük Ayakkabı",
+        "Commission": 25
+      },
+      {
+        "Id": 3255,
+        "Name": "Diğer Ayakkabı Ürünleri",
+        "Commission": 23
+      }
+    ]
+  },
+  {
+    "Id": 5558,
+    "Name": "Bahçe & Elektrikli El Aletleri",
+    "subCategories": [
+      {
+        "Id": 797,
+        "Name": "Bahçe",
+        "Commission": 2
+      },
+      {
+        "Id": 1759,
+        "Name": "Elektrikli El Aletleri",
+        "Commission": 20
+      },
+      {
+        "Id": 4765,
+        "Name": "Enerji Sistemleri",
+        "Commission": 10
+      }
+    ]
+  },
+  {
+    "Id": 5559,
+    "Name": "Banyo Yapı & Hırdavat",
+    "subCategories": [
+      {
+        "Id": 2520,
+        "Name": "Hırdavat",
+        "Commission": 20
+      },
+      {
+        "Id": 2563,
+        "Name": "Boya",
+        "Commission": 15
+      },
+      {
+        "Id": 2569,
+        "Name": "Banyo Yapı Malzemeleri",
+        "Commission": 20
+      },
+      {
+        "Id": 4543,
+        "Name": "Elektrik Tesisat Malzemesi",
+        "Commission": 15
+      }
+    ]
+  },
+  {
+    "Id": 3981,
+    "Name": "Ek Hizmetler",
+    "subCategories": [
+      {
+        "Id": 3982,
+        "Name": "Montaj Hizmeti",
+        "Commission": 20.34
+      },
+      {
+        "Id": 4595,
+        "Name": "Sigorta Hizmeti",
+        "Commission": 29.49
+      },
+      {
+        "Id": 5193,
+        "Name": "Eğitim Hizmeti",
+        "Commission": 10.17
+      },
+      {
+        "Id": 5541,
+        "Name": "Kargo Hizmeti",
+        "Commission": 11
+      },
+      {
+        "Id": 5623,
+        "Name": "Trendyol Plus",
+        "Commission": 0
+      }
+    ]
+  },
+  {
+    "Id": 1071,
+    "Name": "Elektronik",
+    "subCategories": [
+      {
+        "Id": 464,
+        "Name": "Elektrikli Ev Aletleri",
+        "Commission": 12
+      },
+      {
+        "Id": 760,
+        "Name": "Foto & Kamera",
+        "Commission": 11.8
+      },
+      {
+        "Id": 786,
+        "Name": "Oyun & Oyun Konsolları",
+        "Commission": 10
+      },
+      {
+        "Id": 1212,
+        "Name": "Beyaz Eşya & İklimlendirme",
+        "Commission": 10
+      },
+      {
+        "Id": 1213,
+        "Name": "Bilgisayar Grubu",
+        "Commission": 15
+      },
+      {
+        "Id": 1215,
+        "Name": "Giyilebilir Teknoloji",
+        "Commission": 18
+      },
+      {
+        "Id": 2373,
+        "Name": "Kişisel Bakım Aletleri",
+        "Commission": 14
+      },
+      {
+        "Id": 2997,
+        "Name": "Dijital Kod & Ürünler",
+        "Commission": 10
+      },
+      {
+        "Id": 4938,
+        "Name": "Elektronik Aksesuarlar",
+        "Commission": 14
+      },
+      {
+        "Id": 5249,
+        "Name": "Tablet Grubu",
+        "Commission": 6
+      },
+      {
+        "Id": 5250,
+        "Name": "Telefon",
+        "Commission": 5
+      },
+      {
+        "Id": 5601,
+        "Name": "Akıllı Ev Aletleri",
+        "Commission": 12
+      },
+      {
+        "Id": 5605,
+        "Name": "Hoparlör & Projeksiyon Sistemleri",
+        "Commission": 13
+      }
+    ]
+  },
+  {
+    "Id": 758,
+    "Name": "Ev & Mobilya",
+    "subCategories": [
+      {
+        "Id": 503,
+        "Name": "Mobilya",
+        "Commission": 25
+      },
+      {
+        "Id": 5417,
+        "Name": "Ev",
+        "Commission": 20
+      }
+    ]
+  },
+  {
+    "Id": 522,
+    "Name": "Giyim",
+    "subCategories": [
+      {
+        "Id": 543,
+        "Name": "Abiye & Mezuniyet Elbisesi",
+        "Commission": 21.5
+      },
+      {
+        "Id": 548,
+        "Name": "Gelinlik",
+        "Commission": 21.5
+      },
+      {
+        "Id": 549,
+        "Name": "İç Giyim",
+        "Commission": 25
+      },
+      {
+        "Id": 576,
+        "Name": "Plaj Giyim",
+        "Commission": 25
+      },
+      {
+        "Id": 584,
+        "Name": "Takımlar",
+        "Commission": 25
+      },
+      {
+        "Id": 588,
+        "Name": "Takım Elbise",
+        "Commission": 21.5
+      },
+      {
+        "Id": 607,
+        "Name": "Kimono & Kaftan",
+        "Commission": 21.5
+      },
+      {
+        "Id": 1179,
+        "Name": "Bebek Giyim",
+        "Commission": 25
+      },
+      {
+        "Id": 1182,
+        "Name": "Elbise",
+        "Commission": 21.5
+      },
+      {
+        "Id": 1189,
+        "Name": "Kostüm",
+        "Commission": 21.5
+      },
+      {
+        "Id": 1192,
+        "Name": "Salopet & Tulum",
+        "Commission": 25
+      },
+      {
+        "Id": 2269,
+        "Name": "Hamile Giyim",
+        "Commission": 25
+      },
+      {
+        "Id": 2332,
+        "Name": "Mezuniyet Elbisesi",
+        "Commission": 21.5
+      },
+      {
+        "Id": 2729,
+        "Name": "Tesettür Giyim",
+        "Commission": 25
+      },
+      {
+        "Id": 2867,
+        "Name": "Dış Giyim",
+        "Commission": 25
+      },
+      {
+        "Id": 2869,
+        "Name": "Alt Giyim",
+        "Commission": 25
+      },
+      {
+        "Id": 2870,
+        "Name": "Ev Giyim",
+        "Commission": 25
+      },
+      {
+        "Id": 2871,
+        "Name": "Üst Giyim",
+        "Commission": 25
+      },
+      {
+        "Id": 2961,
+        "Name": "Büyük Beden",
+        "Commission": 25
+      },
+      {
+        "Id": 3095,
+        "Name": "Fantezi Giyim",
+        "Commission": 25
+      },
+      {
+        "Id": 3187,
+        "Name": "Spor Giyim",
+        "Commission": 17
+      },
+      {
+        "Id": 4572,
+        "Name": "Spor Tulum",
+        "Commission": 21.5
+      },
+      {
+        "Id": 5029,
+        "Name": "Smokin",
+        "Commission": 21.5
+      }
+    ]
+  },
+  {
+    "Id": 685,
+    "Name": "Hobi & Eğlence",
+    "subCategories": [
+      {
+        "Id": 834,
+        "Name": "Müzik Alet ve Ekipmanları",
+        "Commission": 17
+      },
+      {
+        "Id": 844,
+        "Name": "Parti Malzemeleri",
+        "Commission": 25
+      },
+      {
+        "Id": 3003,
+        "Name": "Drone",
+        "Commission": 10
+      },
+      {
+        "Id": 3964,
+        "Name": "Hobi Malzemeleri",
+        "Commission": 14
+      },
+      {
+        "Id": 4052,
+        "Name": "Hediyelik Ürünler",
+        "Commission": 14
+      },
+      {
+        "Id": 4392,
+        "Name": "Uzaktan Kumandalı Araçlar",
+        "Commission": 14
+      },
+      {
+        "Id": 4569,
+        "Name": "Oyun Grupları",
+        "Commission": 14
+      },
+      {
+        "Id": 4678,
+        "Name": "Tütün & Tütün Aksesuarları",
+        "Commission": 14
+      }
+    ]
+  },
+  {
+    "Id": 1216,
+    "Name": "Kırtasiye & Ofis Malzemeleri",
+    "subCategories": [
+      {
+        "Id": 809,
+        "Name": "Kırtasiye",
+        "Commission": 2
+      },
+      {
+        "Id": 1508,
+        "Name": "Dosyalama & Arşivleme",
+        "Commission": 20
+      },
+      {
+        "Id": 1833,
+        "Name": "Ofis Teknolojileri",
+        "Commission": 17
+      },
+      {
+        "Id": 2013,
+        "Name": "Ofis Sarf Tüketim Malzemesi",
+        "Commission": 19
+      },
+      {
+        "Id": 2014,
+        "Name": "Sanatsal Malzemeler",
+        "Commission": 20
+      },
+      {
+        "Id": 2022,
+        "Name": "Boyalar",
+        "Commission": 20
+      },
+      {
+        "Id": 2175,
+        "Name": "Kırtasiye Kağıt Ürünleri",
+        "Commission": 20
+      },
+      {
+        "Id": 2902,
+        "Name": "Masaüstü Gereçleri",
+        "Commission": 20
+      },
+      {
+        "Id": 2904,
+        "Name": "Kalem",
+        "Commission": 20
+      }
+    ]
+  },
+  {
+    "Id": 687,
+    "Name": "Kitap",
+    "subCategories": [
+      {
+        "Id": 692,
+        "Name": "Kişisel Gelişim & Psikoloji",
+        "Commission": 18
+      },
+      {
+        "Id": 1633,
+        "Name": "Yabancı Dil Kitaplar",
+        "Commission": 18
+      },
+      {
+        "Id": 1635,
+        "Name": "İş, Ekonomi & Pazarlama",
+        "Commission": 18
+      },
+      {
+        "Id": 1636,
+        "Name": "Eğitim",
+        "Commission": 18
+      },
+      {
+        "Id": 1640,
+        "Name": "Din ve Mitoloji",
+        "Commission": 18
+      },
+      {
+        "Id": 4539,
+        "Name": "Çizgi Roman, Dergi ve Gazete",
+        "Commission": 12
+      },
+      {
+        "Id": 4540,
+        "Name": "Çocuk ve Ebeveyn Kitapları",
+        "Commission": 12
+      },
+      {
+        "Id": 4588,
+        "Name": "Dijital Yayınlar ve E-kitaplar",
+        "Commission": 18
+      },
+      {
+        "Id": 4589,
+        "Name": "Hobi, Sanat, Akademik",
+        "Commission": 18
+      },
+      {
+        "Id": 4591,
+        "Name": "Roman ve Edebiyat",
+        "Commission": 18
+      }
+    ]
+  },
+  {
+    "Id": 1070,
+    "Name": "Kozmetik & Kişisel Bakım",
+    "subCategories": [
+      {
+        "Id": 641,
+        "Name": "Makyaj",
+        "Commission": 20
+      },
+      {
+        "Id": 1201,
+        "Name": "Ağız Bakım",
+        "Commission": 20
+      },
+      {
+        "Id": 1203,
+        "Name": "Cilt Bakım",
+        "Commission": 20
+      },
+      {
+        "Id": 1204,
+        "Name": "Kadın Hijyen",
+        "Commission": 20
+      },
+      {
+        "Id": 1209,
+        "Name": "Saç Bakım",
+        "Commission": 20
+      },
+      {
+        "Id": 2425,
+        "Name": "Parfüm ve Deodorant",
+        "Commission": 20
+      },
+      {
+        "Id": 2428,
+        "Name": "Diğer Kişisel Bakım Ürünleri",
+        "Commission": 20
+      },
+      {
+        "Id": 2430,
+        "Name": "Tıraş, Ağda ve Epilasyon",
+        "Commission": 2
+      }
+    ]
+  },
+  {
+    "Id": 790,
+    "Name": "Otomobil & Motosiklet",
+    "subCategories": [
+      {
+        "Id": 792,
+        "Name": "Otomobil",
+        "Commission": 20
+      },
+      {
+        "Id": 1922,
+        "Name": "Oto Ses Görüntü Sistemleri",
+        "Commission": 15
+      },
+      {
+        "Id": 2905,
+        "Name": "Motosiklet",
+        "Commission": 15
+      },
+      {
+        "Id": 4102,
+        "Name": "Otomobil Yedek Parça",
+        "Commission": 10
+      },
+      {
+        "Id": 5395,
+        "Name": "Lastik & Jant",
+        "Commission": 10
+      }
+    ]
+  },
+  {
+    "Id": 3186,
+    "Name": "Spor & Outdoor",
+    "subCategories": [
+      {
+        "Id": 1038,
+        "Name": "Ekipman & Aksesuar",
+        "Commission": 15
+      },
+      {
+        "Id": 3825,
+        "Name": "Acil Durum & Güvenlik Ekipman",
+        "Commission": 10
+      }
+    ]
+  },
+  {
+    "Id": 1219,
+    "Name": "Süpermarket",
+    "subCategories": [
+      {
+        "Id": 1028,
+        "Name": "Pet Shop",
+        "Commission": 17
+      },
+      {
+        "Id": 1382,
+        "Name": "Ev Bakım ve Temizlik",
+        "Commission": 15
+      },
+      {
+        "Id": 1383,
+        "Name": "Ev Tüketim Malzemesi",
+        "Commission": 16
+      },
+      {
+        "Id": 1385,
+        "Name": "Gıda & İçecek",
+        "Commission": 20
+      },
+      {
+        "Id": 2377,
+        "Name": "Sağlık",
+        "Commission": 20
+      },
+      {
+        "Id": 2861,
+        "Name": "Anne ve Bebek Bakım",
+        "Commission": 18
+      },
+      {
+        "Id": 2901,
+        "Name": "Kişisel Bakım",
+        "Commission": 20.34
+      }
+    ]
+  }
+]
