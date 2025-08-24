@@ -173,7 +173,6 @@ const Costs = () => {
           Maliyet Ekle
         </Button>
       </Space>
-
       {/* Arama ve Filtreleme Butonu */}
       <Space style={{ marginBottom: 16, flexWrap: "wrap", gap: 12 }}>
         <Search
@@ -203,8 +202,12 @@ const Costs = () => {
           </Button>
         </Dropdown>
       </Space>
-
-      <Table dataSource={filteredData} columns={filteredColumns} />
+      <Table
+        dataSource={filteredData}
+        columns={filteredColumns}
+        scroll={{ y: 600 }} // tabloya maksimum 600px yükseklik ver, başlık satırla birlikte kayar
+        pagination={{ pageSize: 15 }} // her sayfada 15 veri göster
+      />
     </div>
   );
 };

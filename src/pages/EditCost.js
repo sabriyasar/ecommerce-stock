@@ -1,8 +1,10 @@
+// src/pages/EditCost.js
 import React, { useEffect, useState } from "react";
 import { Form, Input, Button, Select, message, Typography } from "antd";
 import { useNavigate, useParams } from "react-router-dom";
 import { getCostById, updateCost } from "../services/costServices";
 import "../assets/scss/addNewCost.scss";
+import PriceHistoryTable from "../components/priceHistoryTable";
 
 const { Title } = Typography;
 const { Option } = Select;
@@ -12,12 +14,14 @@ const EditCost = () => {
   const navigate = useNavigate();
   const { id } = useParams();
   const [loading, setLoading] = useState(false);
+  const [priceHistory, setPriceHistory] = useState([]);
 
   useEffect(() => {
     const fetchCost = async () => {
       try {
         const res = await getCostById(id);
         form.setFieldsValue(res.data); // verileri forma yükle
+        setPriceHistory(res.data.priceHistory || []);
       } catch (error) {
         console.error(error);
         message.error("Maliyet bilgisi alınamadı!");
@@ -29,9 +33,17 @@ const EditCost = () => {
   const handleFinish = async (values) => {
     setLoading(true);
     try {
-      await updateCost(id, values);
+      // Backend'e tüm değerleri gönderiyoruz
+      const res = await updateCost(id, {
+        ...values,
+        user: "Admin", // login user ile değiştirilebilir
+      });
+
       message.success("Maliyet başarıyla güncellendi!");
-      navigate("/costs");
+
+      // Güncel priceHistory'i state’e ekle
+      setPriceHistory(res.data.priceHistory || []);
+
     } catch (error) {
       console.error(error);
       message.error("Maliyet güncelleme sırasında hata oluştu!");
@@ -106,15 +118,18 @@ const EditCost = () => {
         </Form.Item>
 
         <Form.Item>
-        <div style={{ display: "flex", gap: "10px" }}>
-          <Button type="primary" htmlType="submit" loading={loading}>
-            Kaydet
-          </Button>
-          <Button danger type="primary" onClick={() => navigate("/costs")}>
-            Geri
-          </Button>
+          <div style={{ display: "flex", gap: "10px" }}>
+            <Button type="primary" htmlType="submit" loading={loading}>
+              Kaydet
+            </Button>
+            <Button danger type="primary" onClick={() => navigate("/costs")}>
+              Geri
+            </Button>
           </div>
         </Form.Item>
+
+        {/* Price History Table Component */}
+        <PriceHistoryTable data={priceHistory} />
       </Form>
     </div>
   );
