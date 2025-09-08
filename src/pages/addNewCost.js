@@ -18,8 +18,16 @@ const AddNewCost = () => {
 
   const handleFinish = async (values) => {
     setLoading(true);
+  
+    // Virgülü noktaya çevir ve number'a dönüştür
+    const formattedValues = {
+      ...values,
+      unitPrice: parseFloat(values.unitPrice.replace(",", ".")),
+      multiplePrintUnitPrice: parseFloat(values.multiplePrintUnitPrice.replace(",", ".")),
+    };
+  
     try {
-      await addCost(values);
+      await addCost(formattedValues);
       message.success("Yeni maliyet başarıyla eklendi!");
       navigate("/costs");
     } catch (error) {
@@ -28,7 +36,7 @@ const AddNewCost = () => {
     } finally {
       setLoading(false);
     }
-  };
+  };  
 
   // Sayı validasyon kuralları
   const getNumberRules = (maxDigits) => [
